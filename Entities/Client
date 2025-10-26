@@ -1,0 +1,35 @@
+{
+  "name": "Client",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do cliente"
+    },
+    "document": {
+      "type": "string",
+      "description": "CPF ou CNPJ"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email do cliente"
+    },
+    "address": {
+      "type": "string",
+      "description": "Endere\u00e7o completo"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Status do cliente"
+    }
+  },
+  "required": [
+    "name",
+    "document"
+  ]
+}
