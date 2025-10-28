@@ -1,0 +1,22 @@
+{
+  "name": "NegotiationType",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "C\u00f3digo do tipo"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o do tipo de negocia\u00e7\u00e3o"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es adicionais"
+    }
+  },
+  "required": [
+    "code",
+    "description"
+  ]
+}

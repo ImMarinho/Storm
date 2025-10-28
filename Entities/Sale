@@ -1,0 +1,82 @@
+{
+  "name": "Sale",
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "string",
+      "description": "N\u00famero da venda (VEN-YYYYMMDD-0001)"
+    },
+    "seller_id": {
+      "type": "string",
+      "description": "ID do vendedor"
+    },
+    "seller_name": {
+      "type": "string",
+      "description": "Nome do vendedor"
+    },
+    "client_id": {
+      "type": "string",
+      "description": "ID do cliente"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Nome do cliente"
+    },
+    "negotiation_type_id": {
+      "type": "string",
+      "description": "ID do tipo de negocia\u00e7\u00e3o"
+    },
+    "negotiation_type_name": {
+      "type": "string",
+      "description": "Nome do tipo de negocia\u00e7\u00e3o"
+    },
+    "total": {
+      "type": "number",
+      "description": "Valor total da venda"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CONFIRMED",
+        "CANCELLED"
+      ],
+      "default": "CONFIRMED",
+      "description": "Status da venda"
+    },
+    "items": {
+      "type": "array",
+      "description": "Itens da venda",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_code": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "subtotal": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "number",
+    "seller_id",
+    "client_id",
+    "negotiation_type_id",
+    "total",
+    "items"
+  ]
+}
